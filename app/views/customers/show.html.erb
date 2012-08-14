@@ -1,0 +1,12 @@
+<h1><%= @customer.first_name %> <%= @customer.last_name %></h1>
+<p>Customer ID: <%= @customer.id %></p>
+
+<% order_string = 'order' %>
+<% if @customer.orders.count != 1 %>
+<% order_string += 's' %>
+<% end %>
+<p><%= @customer.orders.count %> <%= order_string %></p>
+
+
+
+

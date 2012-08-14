@@ -1,0 +1,9 @@
+<h1>Customer List</h1>
+
+<ul>
+  <% @customers.each do |customer| %>
+  <% name_string = customer.last_name + ', ' + customer.first_name %>
+  <li><%= link_to name_string, customer %>
+  </li>
+  <% end %>
+</ul>

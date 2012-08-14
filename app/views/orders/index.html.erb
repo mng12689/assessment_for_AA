@@ -1,0 +1,9 @@
+<h1>Order List</h1>
+<ul>
+  <% @orders.each do |order| %>
+  <% order_string =  "Order ID: " + order.id.to_s + " " +
+     "Price: $" + order.price_string %>
+  <li><%= link_to order_string, order_path(order) %></li>
+  <% end %>
+</ul>
+  
